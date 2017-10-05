@@ -7,7 +7,7 @@ for n in (0...numberOfDays-1){
     dailyPayArray.append(nextDaysPay); totalPayArray.append(total);
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency; formatter.formatWidth = 20
-    let outputFormat = NSString(format:"| day %-3d | %@ | %@ |", n, formatter.string(from: Double(dailyPayArray[n])/100.0 as NSNumber)!, formatter.string(from: Double(totalPayArray[n])/100.0 as NSNumber)!)
+    let outputFormat = NSString(format:"| day %-3d | %@ | %@ |", n + 1, formatter.string(from: Double(dailyPayArray[n])/100.0 as NSNumber)!, formatter.string(from: Double(totalPayArray[n])/100.0 as NSNumber)!)
     print("\(outputFormat)")
     nextDaysPay *= 2
 }
